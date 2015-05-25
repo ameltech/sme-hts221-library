@@ -1,0 +1,1 @@
+Library for Smart Everything HTS221 humidity sensor.
