@@ -14,6 +14,9 @@
 
 // the setup function runs once when you press reset or power the board
 void setup() {
+    //Initiate the Wire library and join the I2C bus
+    Wire.begin();
+    
     smeHumidity.begin();
     SerialUSB.begin(115200);
 }
