@@ -24,7 +24,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
 
-    int data = 0;
+    double data = 0;
 
     data = smeHumidity.readHumidity();
     SerialUSB.print("Humidity   : ");
