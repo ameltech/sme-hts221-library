@@ -1,7 +1,7 @@
 /*
  * humidity.cpp
  *
- * Example on SmartEverything humidity sensor reading
+ * Example on SmartEverything humidity / temperature sensor reading
  *
  * Created: 4/27/2015 10:32:11 PM
  *  Author: speirano
