@@ -24,14 +24,14 @@ public:
     bool bduDeactivate(void);
 
     const int readHumidity(void);
-    const int readTemperature(void);
+    const double readTemperature(void);
 private:
     bool storeCalibration(void);
     unsigned char _h0_rH, _h1_rH;
     unsigned int  _T0_degC, _T1_degC;
     unsigned int  _H0_T0, _H1_T0;
     unsigned int  _T0_OUT, _T1_OUT;
-    int _temperature;
+    double _temperature;
     int _humidity;
     uint8_t _address;
 

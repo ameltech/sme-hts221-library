@@ -1,7 +1,7 @@
 /*
  * humidity.cpp
  *
- * Example on SmartEverything humidity sensor reading
+ * Example on SmartEverything humidity / temperature sensor reading
  *
  * Created: 4/27/2015 10:32:11 PM
  *  Author: speirano
@@ -24,7 +24,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
 
-    int data = 0;
+    double data = 0;
 
     data = smeHumidity.readHumidity();
     SerialUSB.print("Humidity   : ");

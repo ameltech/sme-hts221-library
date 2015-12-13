@@ -195,7 +195,7 @@ HTS221::readHumidity(void)
 
 
 
-const int
+const double
 HTS221::readTemperature(void)
 {
     uint8_t data   = 0;
@@ -218,7 +218,7 @@ HTS221::readTemperature(void)
         // Calculate Temperature in decimal of grade centigrades i.e. 15.0 = 150.
         t_temp = (((int16_t)t_out - (int16_t)_T0_OUT) * deg) / ((int16_t)_T1_OUT - (int16_t)_T0_OUT);
         deg    = ((int16_t)_T0_degC) / 8.0;     // remove x8 multiple
-        _temperature = (int16_t)(deg + t_temp);   // provide signed celsius measurement unit
+        _temperature = deg + t_temp;   // provide signed celsius measurement unit
     }
 
     return _temperature;
