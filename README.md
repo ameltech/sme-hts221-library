@@ -1,5 +1,5 @@
-SmartEverything ST HTS221  Humidity Sensor
-=============================================================
+# SmartEverything ST HTS221  Humidity Sensor
+----
 
 This is a library for the ST HTS221 component.
 
@@ -23,22 +23,34 @@ be easily adapt and use on every Arduino and Arduino Certified boards.
 
 [*Library is based on the useful project done by Kris Winer*](https://github.com/kriswiner/VL6180X)
 
-Written by Seve <speirano@amel-tech.com>.
+Written by Seve <seve@axelelettronica.it>.
 
-Repository Contents
+## Repository Contents
 -------------------
 
 * **/examples** - Example sketches for the library (.ino). Run these from the Arduino IDE.
 * **/src** - Source files for the library (.cpp, .h).
 * **library.properties** - General library properties for the Arduino package manager.
 
-Documentation
---------------
 
+## Releases
+---
+#### v1.0.0 First Release
+#### v2.0.0 Second Release 18-Dec-2015
+* Fixed Issue:<br>
+    Fix Humidity example: Add Wire.begin() to initiate the Wire library and join the I2C bus.<br>
+    Make the temperature reading more accurate: The HTS221 sensor is more accurate than 1 degree C.<br>
+
+* New Features:<br>
+    Add 2 new examples to be used with the Arduino plotter<br>
+
+
+## Documentation
+--------------
 * **[Installing an Arduino Library Guide](http://www.arduino.cc/en/Guide/Libraries#toc3)** - How to install a SmartEverything library on the Arduino IDE using the Library Manager
 
 
-License Information
+## License Information
 -------------------
 
 Copyright (c) Amel Technology. All right reserved.
@@ -56,3 +68,4 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
