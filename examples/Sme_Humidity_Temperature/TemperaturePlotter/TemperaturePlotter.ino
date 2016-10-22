@@ -19,11 +19,13 @@ unsigned int pollingInterval = 100; // in milliseconds
 // The setup function runs once when you press reset or power the board
 void setup() {
   Wire.begin();
-  if (!smeHumidity.begin()) { // Flash red light if there is an error initializing the sensor
-    flashRGBLed(PIN_LED_RED, 1000);
+  pinMode(PIN_LED_13, OUTPUT);
+
+  if (!smeHumidity.begin()) { // led ON if there is an error initializing the sensor
+    digitalWrite(PIN_LED_13, HIGH);
   }
   else {
-    flashRGBLed(PIN_LED_GREEN, 1000);
+   digitalWrite(PIN_LED_13, LOW);
   }
   SerialUSB.begin(115200);
 }

@@ -1,11 +1,11 @@
 /*
- * humidity.cpp
- *
- * Example on SmartEverything humidity / temperature sensor reading
- *
- * Created: 4/27/2015 10:32:11 PM
- *  Author: speirano
- */
+   humidity.cpp
+
+   Example on SmartEverything humidity / temperature sensor reading
+
+   Created: 4/27/2015 10:32:11 PM
+    Author: speirano
+*/
 
 #include <Wire.h>
 #include <Arduino.h>
@@ -14,32 +14,33 @@
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-    //Initiate the Wire library and join the I2C bus
-    Wire.begin();
-    
-    smeHumidity.begin();
-    SerialUSB.begin(115200);
+  //Initiate the Wire library and join the I2C bus
+  Wire.begin();
+  pinMode(PIN_LED_13, OUTPUT);
+
+  smeHumidity.begin();
+  SerialUSB.begin(115200);
 }
 
 // the loop function runs over and over again forever
 void loop() {
 
-    double data = 0;
+  double data = 0;
 
-    data = smeHumidity.readHumidity();
-    SerialUSB.print("Humidity   : ");
-    SerialUSB.print(data);
-    SerialUSB.println(" %");
+  data = smeHumidity.readHumidity();
+  SerialUSB.print("Humidity   : ");
+  SerialUSB.print(data);
+  SerialUSB.println(" %");
 
-    data = smeHumidity.readTemperature();
-    SerialUSB.print("Temperature: ");
-    SerialUSB.print(data);
-    SerialUSB.println(" celsius");
+  data = smeHumidity.readTemperature();
+  SerialUSB.print("Temperature: ");
+  SerialUSB.print(data);
+  SerialUSB.println(" celsius");
 
-    ledRedLight(LOW);
-    delay(100);
+  digitalWrite(PIN_LED_13, LOW);
+  delay(100);
 
-    ledRedLight(HIGH);       // turn the LED on
-    delay(500);              // wait for a second
+  digitalWrite(PIN_LED_13, HIGH);       // turn the LED on
+  delay(500);              // wait for a second
 
 }

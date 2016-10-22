@@ -35,7 +35,9 @@ Written by Seve <seve@axelelettronica.it>.
 
 ## Releases
 ---
-#### v1.0.0 First Release
+#### v1.1.1 Second Release 18-Dec-2015
+* Change example to be more Arduino boards compatible and not only for ASME boards family.
+
 #### v2.0.0 Second Release 18-Dec-2015
 * Fixed Issue:<br>
     Fix Humidity example: Add Wire.begin() to initiate the Wire library and join the I2C bus.<br>
@@ -44,6 +46,7 @@ Written by Seve <seve@axelelettronica.it>.
 * New Features:<br>
     Add 2 new examples to be used with the Arduino plotter<br>
 
+#### v1.0.0 First Release
 
 ## Documentation
 --------------
