@@ -35,7 +35,7 @@ Written by Seve <seve@axelelettronica.it>.
 
 ## Releases
 ---
-#### v1.1.2 Second Release 3-Jam-2017
+#### v1.1.2 Second Release 3-Jan-2017
 * Increased Humidity sensor accuracy from int to double. Modified the provided examples accordingly.
 
 #### v1.1.1 Second Release 18-Dec-2015
