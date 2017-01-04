@@ -20,8 +20,8 @@ static inline bool temperatureReady(uint8_t data) {
 
 HTS221::HTS221(void) : _address(HTS221_ADDRESS)
 {
-    _temperature = 0;
-    _humidity = 0;
+    _temperature = 0.0;
+    _humidity    = 0.0;
 }
 
 
@@ -166,7 +166,7 @@ HTS221::bduDeactivate(void)
 }
 
 
-const int
+const double
 HTS221::readHumidity(void)
 {
     uint8_t data   = 0;
@@ -186,9 +186,10 @@ HTS221::readHumidity(void)
         hum = ((int16_t)(_h1_rH) - (int16_t)(_h0_rH))/2.0;  // remove x2 multiple
 
         // Calculate humidity in decimal of grade centigrades i.e. 15.0 = 150.
-        h_temp = (((int16_t)h_out - (int16_t)_H0_T0) * hum) / ((int16_t)_H1_T0 - (int16_t)_H0_T0);
-        hum    = ((int16_t)_h0_rH) / 2.0; // remove x2 multiple
-        _humidity = (int16_t)((hum + h_temp)); // provide signed % measurement unit
+        h_temp = (double)(((int16_t)h_out - (int16_t)_H0_T0) * hum) / 
+	         (double)((int16_t)_H1_T0 - (int16_t)_H0_T0);
+        hum    = (double)((int16_t)_h0_rH) / 2.0; // remove x2 multiple
+        _humidity = (hum + h_temp); // provide signed % measurement unit
     }
     return _humidity;
 }
@@ -213,11 +214,12 @@ HTS221::readTemperature(void)
         t_out |= data;      // LSB
 
         // Decode Temperature
-        deg    = ((int16_t)(_T1_degC) - (int16_t)(_T0_degC))/8.0; // remove x8 multiple
+        deg    = (double)((int16_t)(_T1_degC) - (int16_t)(_T0_degC))/8.0; // remove x8 multiple
 
         // Calculate Temperature in decimal of grade centigrades i.e. 15.0 = 150.
-        t_temp = (((int16_t)t_out - (int16_t)_T0_OUT) * deg) / ((int16_t)_T1_OUT - (int16_t)_T0_OUT);
-        deg    = ((int16_t)_T0_degC) / 8.0;     // remove x8 multiple
+        t_temp = (double)(((int16_t)t_out - (int16_t)_T0_OUT) * deg) / 
+	         (double)((int16_t)_T1_OUT - (int16_t)_T0_OUT);
+        deg    = (double)((int16_t)_T0_degC) / 8.0;     // remove x8 multiple
         _temperature = deg + t_temp;   // provide signed celsius measurement unit
     }
 

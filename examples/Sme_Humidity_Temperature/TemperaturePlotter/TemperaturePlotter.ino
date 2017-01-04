@@ -14,7 +14,7 @@
 #include <Arduino.h>
 
 double temperature;
-unsigned int pollingInterval = 100; // in milliseconds
+unsigned int pollingInterval = 1000; // in milliseconds
 
 // The setup function runs once when you press reset or power the board
 void setup() {

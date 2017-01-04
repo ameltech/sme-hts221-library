@@ -38,9 +38,9 @@ void loop() {
   SerialUSB.println(" celsius");
 
   digitalWrite(PIN_LED_13, LOW);
-  delay(100);
+  delay(300);
 
   digitalWrite(PIN_LED_13, HIGH);       // turn the LED on
-  delay(500);              // wait for a second
+  delay(700);              // wait for a second
 
 }

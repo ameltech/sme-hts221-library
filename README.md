@@ -35,10 +35,13 @@ Written by Seve <seve@axelelettronica.it>.
 
 ## Releases
 ---
+#### v1.1.2 Second Release 3-Jam-2017
+* Increased Humidity sensor accuracy from int to double. Modified the provided examples accordingly.
+
 #### v1.1.1 Second Release 18-Dec-2015
 * Change example to be more Arduino boards compatible and not only for ASME boards family.
 
-#### v2.0.0 Second Release 18-Dec-2015
+#### v1.1.0 Second Release 18-Dec-2015
 * Fixed Issue:<br>
     Fix Humidity example: Add Wire.begin() to initiate the Wire library and join the I2C bus.<br>
     Make the temperature reading more accurate: The HTS221 sensor is more accurate than 1 degree C.<br>

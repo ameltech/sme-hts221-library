@@ -13,8 +13,8 @@
 #include <HTS221.h>
 #include <Arduino.h>
 
-int humidity;
-unsigned int pollingInterval = 100; // in milliseconds
+double humidity;
+unsigned int pollingInterval = 1000; // in milliseconds
 
 // The setup function runs once when you press reset or power the board
 void setup() {

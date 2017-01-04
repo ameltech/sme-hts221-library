@@ -23,7 +23,7 @@ public:
     bool bduActivate(void);
     bool bduDeactivate(void);
 
-    const int readHumidity(void);
+    const double readHumidity(void);
     const double readTemperature(void);
 private:
     bool storeCalibration(void);
@@ -32,7 +32,7 @@ private:
     unsigned int  _H0_T0, _H1_T0;
     unsigned int  _T0_OUT, _T1_OUT;
     double _temperature;
-    int _humidity;
+    double _humidity;
     uint8_t _address;
 
     byte readRegister(byte slaveAddress, byte regToRead);
