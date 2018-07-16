@@ -5,7 +5,7 @@
 #######################################
 # Library (KEYWORD3)
 #######################################
-smeHumidity	     KEYWORD3
+smeHumidity	KEYWORD3
 
 #######################################
 # Datatypes (KEYWORD1)
@@ -14,13 +14,13 @@ smeHumidity	     KEYWORD3
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-begin	    KEYWORD2
-activate	    KEYWORD2
-deactivate	    KEYWORD2
-bduActivate	    KEYWORD2
-bduDeactivate	    KEYWORD2
-readHumidity	    KEYWORD2
-readTemperature	    KEYWORD2
+begin	KEYWORD2
+activate	KEYWORD2
+deactivate	KEYWORD2
+bduActivate	KEYWORD2
+bduDeactivate	KEYWORD2
+readHumidity	KEYWORD2
+readTemperature	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
